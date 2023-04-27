@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 10px;
+}
+
+/* Removing input background color for autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #24221f inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: var(--text-base); /* Change the color to your own text color */
+}
+/* Removing input background colour for autocomplete */
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--text-base);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--background);
+}
+
+.textButton {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.textButton:hover {
+    opacity: 60%;
+}
+
+.wrapper {
+    width: 100vw;
+    min-height: 970px;
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper .mainContent {
+    flex: 1;
+
+    background-color: var(--background);
+
+    display: grid;
+    place-items: center;
+}
+
+.wrapper .SideImage {
+    max-width: 750px;
+
+    flex: 1;
+
+    background-image: url("./assets/side-image-2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper .mainContent .logo {
+    width: 115px;
+    height: 28px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 40px 0 0 40px;
+}
+
+.wrapper .mainContent .form-login-box {
+    width: 572px;
+    height: 512px;
+
+    background-color: var(--form-background);
+
+    border-radius: 4px;
+}
+
+.wrapper .mainContent .form-login-box #form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .mainContent .form-login-box #form .titleBox {
+    display: flex;
+    align-items: center;
+
+    margin: 55px 0 10px 0;
+}
+
+.wrapper .mainContent .form-login-box #form .titleBox img {
+    height: 24px;
+    width: 24px;
+}
+
+.wrapper .mainContent .form-login-box #form .titleBox h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-title);
+
+    margin-left: 10px;
+}
+
+.wrapper .mainContent .form-login-box #form .signIn {
+    font-size: 16px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.wrapper .mainContent .form-login-box #form .textForm {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wrapper .mainContent .form-login-box #form .form-input {
+    min-width: 355px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px;
+    border: 1px #868686 solid;
+
+    padding: 5px;
+    margin: 5px 0 20px;
+}
+
+.wrapper .mainContent .form-login-box #form .form-input:focus-within  {
+    border: 2px var(--primary-color) solid;
+}
+
+.wrapper .mainContent .form-login-box #form .form-input:focus-within #mailImg {
+    content:url("./assets/mail-focus.svg");
+}
+
+.wrapper .mainContent .form-login-box #form .form-input:focus-within #pswdImg {
+    content:url("./assets/lock-focus.svg");
+}
+
+.wrapper .mainContent .form-login-box #form .form-input img {
+    width: 20px;
+    height: 20px;
+
+    margin-left: 5px;
+}
+
+.wrapper .mainContent .form-login-box #form .form-input input {
+    width: 100%;
+
+    font-size: 14px;
+    color: var(--text-base);
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    margin-left: 10px;
+}
+
+.wrapper .mainContent .form-login-box #form .form-input #pswdInput::-ms-reveal {
+    height: 20px;
+    width: 20px;
+    background: url(./assets/eye.svg);
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot .rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot #buttonRemember {
+    height: 20px;
+    width: 20px;
+
+    appearance: none;
+
+    border: 1px solid #868686;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot #buttonRemember:checked {
+    background: url(./assets/check.svg) center;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot #buttonRemember:hover {
+    opacity: 60%;
+}
+
+.wrapper .mainContent .form-login-box #form .rememberAndForgot label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.wrapper .mainContent .form-login-box #form .loginButton {
+    height: 51px;
+    width: 100%;
+
+    background-color: var(--primary-color);
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #473404;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    margin-bottom: 14px;
+}
+
+.wrapper .mainContent .form-login-box #form .loginButton:hover {
+    opacity: 60%;
+}
+
+.wrapper .mainContent .form-login-box #form .signUpBox {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .mainContent .form-login-box #form .signUp {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+/* ---------------------------------------------------------------------- */
+/* @MEDIA */
+
+@media (max-width: 1050px) {
+    .wrapper .SideImage {
+        display: none;
+    }
+}
+
+/* 572 */
+@media (max-width: 572px) {
+    .wrapper {
+        width: 100vw;
+        height: 100vh;
+        min-height: 0;
+    }
+
+    .wrapper .mainContent {
+        background-color: var(--background);
+        display: inline;
+    }
+
+    .wrapper .mainContent .logo {
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 28px;
+    }
+
+    .wrapper .mainContent .logo img {
+        margin: 20px;
+    }
+
+    .wrapper .mainContent .form-login-box {
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--background);
+
+        padding: 0px 10px 0 10px;
+    }
+
+    .wrapper .mainContent .form-login-box #form .form-input {
+        width: 100%;
+    }
+
+}

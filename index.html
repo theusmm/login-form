@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mainContent">
+
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="">
+            </div>
+
+            <section class="form-login-box">
+                <div id="form">
+                    <form action="">
+                        <div class="titleBox">
+                            <img src="./assets/log-in.svg" alt="">
+                            <h2>Login</h2>
+                        </div>
+
+                        <div class="signIn">Sign in to continue to your account.</div>
+    
+                        <label class="textForm" for="mailInput">E-mail</label>
+                        <div class="form-input mailFocus">
+                            <img id="mailImg" src="./assets/mail.svg" alt="">
+                            <input id="mailInput" name="email" placeholder="E-mail address" type="email">
+                        </div>
+    
+                        <label class="textForm" for="pswdInput">Password</label>
+                        <div class="form-input pswdFocus">
+                            <img id="pswdImg" src="./assets/lock.svg" alt="">
+                            <input id="pswdInput" name="password" placeholder="Password" type="password">
+                        </div>
+
+                        <div class="rememberAndForgot">
+                            <div class="rememberMe">
+                                <input type="checkbox" id="buttonRemember" name="remember">
+                                <label for="buttonRemember">Remember me</label>
+                            </div>
+                            <span class="textButton">forgot password?</span>
+                        </div>
+
+                        <button class="loginButton" type="submit" disabled>Sign in</button>
+
+                        <div class="signUpBox">
+                            <div class="signUp">Not a member yet? <span class="textButton">Sign up.</span></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="SideImage"></div>
+    </div>
+    
+    <script src="./script.js"></script>
+
+</body>
+</html>
